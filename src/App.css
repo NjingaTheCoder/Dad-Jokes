@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+
+:root{
+
+  --scroll-value : 0;
+  --font : "Rubik Gemstones";
+  --color : forestgreen;
+}
+
+html , body{
+
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+
+  margin: 0;
+  padding: 0;
+}
+
+.dad-joke-container img{
+
+  width: 100px;
+  height: 100px;
+}
+
+.dad-joke-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.inside-joke-container{
+ 
+  font-family: var(--font);
+  font-size: 1.1rem;
+  margin-right: 5rem;
+}
+
+
+.inside-joke-container .dad-joke-two , .dad-joke-three ,.dad-joke-four{
+  background-color: var(--color);
+  padding: 2rem;
+  z-index: 5;
+  width: 90%;
+  margin: 2rem 0rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.dad-joke-two{
+  transform: translateY(calc(1% * var(--scroll-value) * 2 ));
+  -webkit-transform: translateY(calc(1% * var(--scroll-value) * 2 ));
+  -moz-transform: translateY(calc(1% * var(--scroll-value) * 2 ));
+  -ms-transform: translateY(calc(1% * var(--scroll-value) * 2 ));
+  -o-transform: translateY(calc(1% * var(--scroll-value) * 2 ));
+}
+
+.dad-joke-three{
+  background-color: rebeccapurple;
+  margin-left: 3rem;
+  transform: translateX(calc(1% * var(--scroll-value)));
+  -webkit-transform: translateX(calc(1% * var(--scroll-value)));
+  -moz-transform: translateX(calc(1% * var(--scroll-value)));
+  -ms-transform: translateX(calc(1% * var(--scroll-value)));
+  -o-transform: translateX(calc(1% * var(--scroll-value)));
+}
+
+.dad-joke-four{
+  background-color: red;
+  transform: translateX(calc(-1% * var(--scroll-value)));
+  -webkit-transform: translateX(calc(-1% * var(--scroll-value)));
+  -moz-transform: translateX(calc(-1% * var(--scroll-value)));
+  -ms-transform: translateX(calc(-1% * var(--scroll-value)));
+  -o-transform: translateX(calc(-1% * var(--scroll-value)));
+}
+
+
+
+
+.dad-joke-one {
+  font-family: var(--font);
+  width: calc(50%);
+  font-size: 1.3rem;
+  padding: 0rem 5rem;
+  height: 70vh;
+}
+
+.inside-joke-container b {
+  color: black;
+}
+
+
+.punchLine{
+  font-size: 3rem;
+  margin-top: 15%;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.show-joke{
+  animation: slider .9s linear forwards;
+  -webkit-animation: slider .9s linear forwards .2s;
+}
+
+
+@keyframes slider{
+
+  0%{
+      
+      color: var(--color);
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      opacity: 0;
+  }
+
+  50%{
+    color: #006400;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  100%{
+    color: black;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    opacity: 1;
+}
+}
+
+.dad-joke-one p{
+  color: var(--color);
+  font-size: clamp(1% * var(--scroll-value) * 4, 5%, 5%);
+  margin-top: 33%;
+  position: fixed;
+  transform: translateY(calc(-1% * var(--scroll-value) * 5));
+  -webkit-transform: translateY(calc(-1% * var(--scroll-value) * 5));
+  -moz-transform: translateY(calc(-1% * var(--scroll-value) * 5));
+  -ms-transform: translateY(calc(-1% * var(--scroll-value) * 5));
+  -o-transform: translateY(calc(-1% * var(--scroll-value) * 5));
+}
+
+.dad-joke-one h1{
+  position: fixed;
+  width: calc(35%);
+  transform: translateY(calc(-1% * var(--scroll-value) * 3));
+  -webkit-transform: translateY(calc(-1% * var(--scroll-value) * 3));
+  -moz-transform: translateY(calc(-1% * var(--scroll-value) * 3));
+  -ms-transform: translateY(calc(-1% * var(--scroll-value) * 3));
+  -o-transform: translateY(calc(-1% * var(--scroll-value) * 3));
+} 
+
+
+.dad-joke-five{
+
+  height: 100vh;
+  margin-top: 10rem;
+  padding: 1rem 5rem;
+  font-family: var(--font);
+  background-color: rgb(136, 136, 136);
+}
+
+.dad-joke-six,.dad-joke-seven{
+  
+  height: 100vh;
+  padding: 1rem 5rem;
+  font-family: var(--font);
+  background-color: rgb(136, 136, 136);
+}
+

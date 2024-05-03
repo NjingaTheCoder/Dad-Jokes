@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+
+:root{
+
+  --scroll-value : 0;
+  --color-yellow : rgb(238, 238, 0);
+  --font : "Rubik Gemstones";
+}
+
+
+.cards{
+
+    display: flex;
+    gap: 1rem;
+    padding: 5rem;
+
+}
+
+.cards p{
+    background-color: var(--color);
+    font-family: var(--font);
+    padding: 2rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    transform: translateX(-100%);
+    justify-self: center;
+    align-items:center;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+     opacity: 0%;
+}
+
+.slide:nth-child(1){
+    animation:  SlideIn .8s linear 300ms forwards;
+    -webkit-animation:  SlideIn .8s linear 300ms forwards;
+}
+
+.slide:nth-child(2) {
+    animation:  SlideIn .7s linear 500ms forwards;
+    -webkit-animation:  SlideIn .7s linear 500ms forwards;
+}
+
+.slide:nth-child(3){
+    animation:  SlideIn .6s linear 700ms forwards;
+    -webkit-animation:  SlideIn .6s linear 700ms forwards;
+}
+
+.slide:nth-child(4){
+    animation:  SlideIn .5s linear 900ms forwards;
+    -webkit-animation:  SlideIn .5s linear 900ms forwards;
+}
+
+@keyframes SlideIn{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+         background-color: rebeccapurple;
+         color: forestgreen;
+
+    }
+     
+
+    100%{
+        
+        opacity: 1;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        background-color: forestgreen;
+}
+}
